@@ -1,19 +1,8 @@
-import {
-  AcademicCapIcon,
-  ArrowDownTrayIcon,
-  BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
-  MapIcon,
-  SparklesIcon,
-} from '@heroicons/react/24/outline';
-
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/web-background.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -44,8 +33,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Shravan Kumar Talla',
+  description: "Shravan Kumar Talla's Portfolio Website",
 };
 
 /**
@@ -56,7 +45,6 @@ export const SectionId = {
   About: 'about',
   Contact: 'contact',
   Portfolio: 'portfolio',
-  Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
   Testimonials: 'testimonials',
@@ -69,28 +57,23 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Turning ideas into code and code into innovation.`,
   description: (
     <>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg"> 👋🏻 Welcome to my digital space!</p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I'm <strong className="text-stone-100">Shravan Kumar Talla</strong> a software architect, full-stack developer,
+        and a tech enthusiast, with over 13 years of experience in software development and architecture 👨🏻‍💻. <br />
+        Based in the bustling city of <strong className="text-stone-100">Hyderabad, India</strong>🇮🇳 <br />I spend my
+        days crafting innovative and scalable solutions that bring ideas to life—and my evenings chasing new adventures
+        in tech.
+        <br />
+        Explore 🕵🏻‍♂️ my portfolio to learn about my journey, skills, and passion for technology. <br />
+        <strong className="text-stone-100">Let’s connect and create something amazing together! 🚀 </strong>
       </p>
     </>
   ),
   actions: [
-    {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
@@ -104,17 +87,42 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
-  aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
-  ],
+  description: (
+    <>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        I specialize in everything from building seamless user interfaces 🖥️ to architecting complex backend systems.
+        Whether it’s coding with <strong className="text-stone-100">Java</strong> ☕, experimenting with{' '}
+        <strong className="text-stone-100">React</strong> ⚛️, or deploying on the{' '}
+        <strong className="text-stone-100">cloud</strong> ☁️, I thrive on challenges. And let’s not forget my growing
+        love for <strong className="text-stone-100">Python</strong> 🐍—the Swiss Army knife of programming languages
+        that keeps me hooked!
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        When I’m not busy designing the next big thing, you’ll probably find me:
+      </p>
+      <ul>
+        <li>
+          <strong className="text-stone-100">Geeking out over the latest tech gadgets</strong> 🤓 because shiny things
+          are irresistible!
+        </li>
+        <li>
+          <strong className="text-stone-100">Exploring new cuisines</strong> 🍜 because life is too short for boring
+          food.
+        </li>
+        <li>
+          <strong className="text-stone-100">Unwinding with a good book or a gripping sci-fi movie 📚🎬</strong>,
+          because everyone needs a little escape into another world.
+        </li>
+      </ul>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        At the end of the day, I’m just a passionate developer who believes in using technology to make the world a
+        better place, one elegant line of code at a time.
+        <br />
+        Let’s build something extraordinary together!
+      </p>
+    </>
+  ),
+  aboutItems: [],
 };
 
 /**
@@ -122,70 +130,145 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: '💡 Programming Languages',
     skills: [
       {
-        name: 'English',
-        level: 10,
+        name: 'Java ☕',
+        level: 9.5,
       },
       {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
+        name: 'Python 🐍',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
+        name: 'JavaScript ⚡',
+        level: 9,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: '⚙️ Frameworks',
     skills: [
       {
-        name: 'React Native',
+        name: 'React ⚛️',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Spring Boot 🌱',
+        level: 8,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Node.js 🚀',
+        level: 8,
+      },
+      {
+        name: 'TypeScript ☑️',
+        level: 8,
+      },
+      {
+        name: 'HTML & CSS',
+        level: 9,
+      },
+    ],
+  },
+  {
+    name: '📚 Content Management Systems',
+    skills: [
+      {
+        name: 'Adobe Experience Manager (AEM)',
+        level: 9.5,
+      },
+    ],
+  },
+  {
+    name: '☁️ Cloud & DevOps',
+    skills: [
+      {
+        name: 'AWS ☁️',
+        level: 8,
+      },
+      {
+        name: 'Kubernetes',
+        level: 7,
+      },
+      {
+        name: 'Docker',
+        level: 7,
+      },
+      {
+        name: 'CI/CD Pipelines',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: '🌐 API & Backend Frameworks',
+    skills: [
+      {
+        name: 'GraphQL',
+        level: 7,
+      },
+      {
+        name: 'REST APIs',
+        level: 9,
+      },
+      {
+        name: 'Apigee',
+        level: 7,
+      },
+      {
+        name: 'Microservices Architecture',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: '📦 Databases',
+    skills: [
+      {
+        name: 'MySQL',
+        level: 8,
+      },
+      {
+        name: 'Oracle',
+        level: 8,
+      },
+      {
+        name: 'MongoDB',
+        level: 7,
+      },
+      {
+        name: 'Redis',
+        level: 7,
+      },
+      {
+        name: 'DynamoDB',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: '🛠️ Tools & Methodologies',
+    skills: [
+      {
+        name: 'Git',
+        level: 9,
+      },
+      {
+        name: 'Jenkins',
+        level: 8,
+      },
+      {
+        name: 'SonarQube',
+        level: 8,
+      },
+      {
+        name: 'Agile (Scrum, Kanban, SAFe)',
+        level: 7,
+      },
+      {
+        name: 'Test-Driven Development (TDD)',
+        level: 8,
       },
     ],
   },
@@ -335,28 +418,34 @@ export const testimonial: TestimonialSection = {
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: "Let's Connect",
+  description:
+    '💬 Feel free to reach out if you’d like to discuss tech, collaborate on projects, or share your favorite Python tricks!',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
+      text: 'tallashravankumar@gmail.com',
       href: 'mailto:reachout@timbaker.me',
     },
     {
-      type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      type: ContactType.LinkedIn,
+      text: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/shravankumartalla/',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@shravantalla',
+      href: 'https://www.instagram.com/shravantalla/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'tallashravan',
+      href: 'https://github.com/tallashravan',
+    },
+    {
+      type: ContactType.Twitter,
+      text: '@itsshravantalla',
+      href: 'https://twitter.com/itsshravantalla',
     },
   ],
 };
@@ -365,9 +454,8 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tallashravan'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/shravankumartalla/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/shravantalla/'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/itsshravantalla'},
 ];
